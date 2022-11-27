@@ -1,0 +1,89 @@
+@model InventarioMVCPOO.Models.Articulo
+@{
+    ViewData["Title"] = "Borrar Articulo";
+}
+
+<h1 class="text-center">
+    Aplicación NET 7 MVC - Gestión de Articulos
+</h1>
+<h4 class="text-center">Aplicación para gestionar articulos - Ensayo de desarrollo en .NET con EntityframeworkCore</h4>
+
+<div class="row">
+    <div class="col-sm-12">
+       <div class="card border">
+        <div class="card-header">
+            <h3 class="text-center">Borrar Articulo</h3>
+        </div>
+        <div class="card-body">
+            <form asp-controller="Home" asp-action="Borrar" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!--Enviar el id del articulo como campo oculto-->
+                <input type="hidden" asp-form="Id"/>
+
+                 <div class="form-group">
+                    <label asp-for="CodigoProveedor" class="control-label"></label>
+                    <input asp-for="CodigoProveedor" class="form-control" readonly>
+                    <span asp-validation-for="CodigoProveedor" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Nombre" class="control-label"></label>
+                    <input asp-for="Nombre" class="form-control"readonly>
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Descripcion" class="control-label"></label>
+                    <input asp-for="Descripcion" class="form-control"readonly>
+                    <span asp-validation-for="Descripcion" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Categoria" class="control-label"></label>
+                    <input asp-for="Categoria" class="form-control"readonly>
+                    <span asp-validation-for="Categoria" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PrecioUnitario" class="control-label"></label>
+                    <input asp-for="PrecioUnitario" class="form-control"readonly>
+                    <span asp-validation-for="PrecioUnitario" class="text-danger"></span>
+                </div>
+
+                  <div class="form-group">
+                    <label asp-for="UnidadStock" class="control-label"></label>
+                    <input asp-for="UnidadStock" class="form-control"readonly>
+                    <span asp-validation-for="UnidadStock" class="text-danger"></span>
+                </div>
+
+                  <div class="form-group">
+                    <label asp-for="UnidadCompra" class="control-label"></label>
+                    <input asp-for="UnidadCompra" class="form-control"readonly>
+                    <span asp-validation-for="UnidadCompra" class="text-danger"></span>
+                </div>
+
+                  <div class="form-group">
+                    <label asp-for="PtoReorden" class="control-label"></label>
+                    <input asp-for="PtoReorden" class="form-control"readonly>
+                    <span asp-validation-for="PtoReorden" class="text-danger"></span>
+                </div>
+
+                  <div class="form-group">
+                    <label asp-for="descontinuado" class="control-label"></label>
+                    <input asp-for="descontinuado" class="form-control"readonly>
+                    <span asp-validation-for="descontinuado" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Borrar articulo</button>
+                </div>
+
+            </form>
+        </div>
+       </div>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Volver a Lista</a>
+</div>
